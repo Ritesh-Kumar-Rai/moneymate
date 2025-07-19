@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import '../ErrorPage.css';
 
 const ErrorPage = ({ error }) => {
+
+    const navigate = useNavigate();
+
     return (
         <section className="bg-gradient-to-br from-gray-900 to-gray-800 h-full w-full flex items-center justify-center p-4 overflow-hidden">
             <div className="perspective-1000 w-full max-w-2xl">
@@ -68,7 +72,7 @@ const ErrorPage = ({ error }) => {
                 <div className="mt-16 text-center animate-fade-in">
                     <h1 className="text-9xl font-bold text-white mb-4">404</h1>
                     <h2 className="text-gray-500 text-2xl mb-8 max-w-md mx-auto">Sorry, We couldn't find what you are looking for!</h2>
-                    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer">
+                    <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer" onClick={() => navigate('/')}>
                         Go to Home
                     </button>
                 </div>

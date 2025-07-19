@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './Header';
 import { Outlet } from 'react-router-dom';
 import SideMenu from './SideMenu';
+import Footer from './Footer';
 
 const AppLayout = () => {
     return (
@@ -11,6 +12,7 @@ const AppLayout = () => {
                 <SideMenu />
                 <Outlet />
             </div>
+            <Footer />
         </>
     )
 };
