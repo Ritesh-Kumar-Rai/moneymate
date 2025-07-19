@@ -1,0 +1,75 @@
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+* {
+  @apply dark:text-gray-100;
+}
+
+/* --------------------------------------------------
+   ✨ Global Defaults & Typography
+-------------------------------------------------- */
+html,
+body {
+  font-family: Inter, sans-serif;
+  @apply text-base text-gray-800 bg-gray-50 dark:bg-gray-800 leading-relaxed antialiased;
+}
+
+/* --------------------------------------------------
+   📌 Headings & Text Hierarchy
+-------------------------------------------------- */
+h1 {
+  /* @apply text-3xl font-bold text-gray-900 dark:text-gray-100; */
+}
+
+h2 {
+  /* @apply text-2xl font-semibold text-gray-800 dark:text-gray-100; */
+}
+
+h3 {
+  @apply text-xl font-medium text-gray-700 dark:text-gray-100;
+}
+
+p {
+  @apply text-base text-gray-700 dark:text-gray-100;
+}
+
+small {
+  @apply text-sm text-gray-500 dark:text-gray-100;
+}
+
+/* --------------------------------------------------
+   🧭 Custom Scrollbar (Optional)
+-------------------------------------------------- */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-indigo-400 rounded-full;
+}
+
+/* --------------------------------------------------
+   🎯 Transitions & Utility Enhancers
+-------------------------------------------------- */
+.fade-enter {
+  @apply opacity-0;
+}
+
+.fade-enter-active {
+  @apply opacity-100 transition-opacity duration-300;
+}
+
+.slide-in-left {
+  @apply transform -translate-x-full;
+}
+
+.slide-in-left-active {
+  @apply transform translate-x-0 transition-transform duration-300;
+}

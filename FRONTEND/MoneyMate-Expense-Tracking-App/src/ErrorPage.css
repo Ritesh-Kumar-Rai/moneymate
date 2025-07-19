@@ -1,0 +1,83 @@
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.animate-car-float {
+  animation: carFloat 6s infinite ease-in-out;
+}
+.animate-wheels {
+  animation: wheelSpin 2s infinite linear;
+}
+.animate-light-glow {
+  animation: lightPulse 3s infinite alternate;
+}
+
+@keyframes carFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(5deg);
+  }
+}
+@keyframes wheelSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes lightPulse {
+  0% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-street-line {
+  animation: streetLine 3s infinite linear;
+}
+.animate-particle {
+  animation: particleFloat 10s infinite linear;
+}
+.animate-fade-in {
+  animation: fadeIn 2s ease-out forwards;
+}
+
+@keyframes streetLine {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes particleFloat {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) translateX(20px);
+    opacity: 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
