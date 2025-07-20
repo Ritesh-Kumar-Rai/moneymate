@@ -1,0 +1,9 @@
+#add-transaction-sidebar::-webkit-scrollbar {
+  width: 2px;
+  height: 6px;
+}
+
+#add-transaction-sidebar::-webkit-scrollbar-thumb {
+  background-color: slategray;
+  border-radius: 50%;
+}

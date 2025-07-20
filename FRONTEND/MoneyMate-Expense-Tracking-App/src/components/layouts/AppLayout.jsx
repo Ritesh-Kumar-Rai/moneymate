@@ -8,10 +8,10 @@ const AppLayout = () => {
     return (
         <>
             <Header />
-            <div className='w-full flex'>
+            <main className='w-full flex'>
                 <SideMenu />
                 <Outlet />
-            </div>
+            </main>
             <Footer />
         </>
     )
