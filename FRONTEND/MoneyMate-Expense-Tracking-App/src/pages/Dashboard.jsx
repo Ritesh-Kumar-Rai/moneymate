@@ -3,6 +3,7 @@ import { FaCreditCard, FaWallet } from "react-icons/fa6";
 import { GiReceiveMoney } from "react-icons/gi";
 import SummaryCard from '../components/ui/SummaryCard';
 import GraphChart from '../components/charts/GraphChart';
+import CustomPieChart from '../components/charts/CustomPieChart';
 
 
 const Dashboard = () => {
@@ -15,6 +16,7 @@ const Dashboard = () => {
 
             </div>
             <h1 className='text-5xl font-bold'>Lorem ipsum dolor sit amet.</h1>
+            <CustomPieChart />
             <GraphChart type='graph' />
             <GraphChart type='line' />
 
