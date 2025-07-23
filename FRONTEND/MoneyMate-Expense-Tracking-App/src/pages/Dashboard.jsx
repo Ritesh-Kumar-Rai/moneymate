@@ -15,7 +15,7 @@ const Dashboard = () => {
                 <SummaryCard icon={<GiReceiveMoney />} bg_color='bg-red-700' label={"Total Expenses"} value_amount={788} />
 
             </div>
-            <h1 className='text-5xl font-bold'>Lorem ipsum dolor sit amet.</h1>
+            {/* <h1 className='text-5xl font-bold'>Lorem ipsum dolor sit amet.</h1> */}
             <CustomPieChart />
             <GraphChart type='graph' />
             <GraphChart type='line' />
