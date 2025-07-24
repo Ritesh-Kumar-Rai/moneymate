@@ -43,6 +43,10 @@ small {
   @apply text-sm text-gray-500 dark:text-gray-100;
 }
 
+table > caption {
+  @apply text-slate-500;
+}
+
 /* --------------------------------------------------
    🧭 Custom Scrollbar (Optional)
 -------------------------------------------------- */

@@ -5,6 +5,7 @@ import SummaryCard from '../components/ui/SummaryCard';
 import GraphChart from '../components/charts/GraphChart';
 import CustomPieChart from '../components/charts/CustomPieChart';
 import ChartLayout from '../components/charts/ChartLayout';
+import Table from '../components/ui/Table';
 
 
 const Dashboard = () => {
@@ -22,7 +23,8 @@ const Dashboard = () => {
             {/* <GraphChart type='graph' /> */}
             {/* <GraphChart type='line' /> */}
 
-
+            {/* table for recent transactions */}
+            <Table />
 
         </section>
     )
