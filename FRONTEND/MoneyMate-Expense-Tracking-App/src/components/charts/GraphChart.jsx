@@ -52,9 +52,11 @@ const data = [
 
 const GraphChart = ({ type = 'line' }) => {
 
-    if (type === 'graph') {
+    console.log("graph chart runned!");
+
+    if (type === 'area-graph') {
         return (
-            <div className='mt-30' style={{ height: '500px', width: '100%' }}>
+            <div className='mt-10' style={{ height: '500px', width: '100%' }}>
                 <ResponsiveContainer width='100%' height='100%'>
                     <AreaChart width={1400} height={500} data={data}
                         margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
@@ -82,7 +84,7 @@ const GraphChart = ({ type = 'line' }) => {
 
 
     return (
-        <div className='mt-30' style={{ height: '500px', width: '100%' }}>
+        <div className='mt-10' style={{ height: '500px', width: '100%' }}>
             <ResponsiveContainer width="100%" height="100%">
                 <LineChart
                     width={500}

@@ -27,10 +27,10 @@ const CustomPieChart = () => {
   ];
 
   const colors = ["#f2ad50", "#154c79", "#abdbe3", "#873e23"];
-
+  console.log("Pie Chart runned!");
 
   return (
-    <div className='mt-30' style={{ width: '100%', height: '500px' }}>
+    <div className='mt-10' style={{ width: '100%', height: '500px' }}>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={100}>
           <Pie data={data} cx={'50%'} cy={'50%'} outerRadius={150} dataKey='amount' nameKey='category' fill='rgb(28 35 56)' label>

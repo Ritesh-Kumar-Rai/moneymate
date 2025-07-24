@@ -6,7 +6,7 @@ import ErrorPage from './pages/ErrorPage';
 import ExpensePage from './pages/ExpensePage';
 
 function App() {
-  console.log(ExpensePage)
+
   return (
 
     <Router>

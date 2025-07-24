@@ -71,7 +71,7 @@ const ErrorPage = ({ error }) => {
                 {/*  Call to Action  */}
                 <div className="mt-16 text-center animate-fade-in">
                     <h1 className="text-9xl font-bold text-white mb-4">404</h1>
-                    <h2 className="text-gray-500 text-2xl mb-8 max-w-md mx-auto">Sorry, We couldn't find what you are looking for!</h2>
+                    <h2 id='error_page_h2' className="text-2xl mb-8 max-w-md mx-auto">Sorry, We couldn't find what you are looking for!</h2>
                     <button className="px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-full font-medium shadow-lg hover:shadow-xl transition-all transform hover:scale-105 cursor-pointer" onClick={() => navigate('/')}>
                         Go to Home
                     </button>
