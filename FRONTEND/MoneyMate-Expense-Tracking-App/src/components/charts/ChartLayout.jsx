@@ -34,7 +34,7 @@ const ChartLayout = ({ label_for_graph, label_for_pie }) => {
                         <option value="pie-chart">Pie Chart</option>
                     </select>
                 </div>
-                <CustomPieChart />
+                <CustomPieChart custom_style_class='mt-10' />
             </div>
         </div>
     )

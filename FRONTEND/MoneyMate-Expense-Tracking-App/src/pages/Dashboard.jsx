@@ -24,7 +24,16 @@ const Dashboard = () => {
             {/* <GraphChart type='line' /> */}
 
             {/* table for recent transactions */}
-            <Table />
+            <Table no_of_rows={10} label='Recent Transactions' caption='Recent 10 transactions of both income and expenses' custom_style_class='mt-10' />
+
+            {/* expense-container */}
+            <div className='mt-30'>
+                <h2>Expenses of Last 2 weeks</h2>
+                <div className='w-full grid grid-cols-1 md:grid-cols-3 items-center'>
+                    <Table custom_style_class='col-span-2' caption='Expenses of last 2 weeks' transactions_to_show='expense' no_of_rows={10} />
+                    <CustomPieChart />
+                </div>
+            </div>
 
         </section>
     )

@@ -2,7 +2,9 @@ import { IoMdMore } from "react-icons/io";
 import { CgSwap } from "react-icons/cg";
 import { LuTrendingDown, LuTrendingUp } from "react-icons/lu";
 
-const Table = () => {
+const Table = ({ no_of_rows = 5, label = '', caption = '', custom_style_class = '', transactions_to_show = 'both' }) => {
+
+    // `transactions_to_show` parameter is used to display what kind of transactions to be displayed whether income/expense or both..
 
     const transaction_entries = [
         {
@@ -173,10 +175,10 @@ const Table = () => {
     ];
 
     return (
-        <div className="mt-10 w-full">
-            <h2>Recent Transactions</h2>
+        <div className={`w-full ${custom_style_class}`}>
+            {label.length > 0 && <h2>{label}</h2>}
             <table className="mt-5 w-full table-auto border-collapse border border-gray-400 bg-slate-200 dark:bg-gray-800 rounded overflow-hidden outline-1 outline-dashed outline-slate-400 shadow-2xl">
-                <caption className="caption-bottom mt-3 text-sm">Recent 10 transactions of both income and expenses</caption>
+                <caption className="caption-bottom mt-3 text-sm">{caption}</caption>
                 <thead className="border-b-2 border-slate-400">
                     <tr>
                         <th className="border border-gray-600 px-3 py-2">Date</th>
@@ -212,9 +214,16 @@ const Table = () => {
                     </tr>
 
                     {transaction_entries.map((each_entry, index) => {
-                        if (index >= 10) {
+                        if (index >= no_of_rows) {
                             return;
                         }
+
+                        if (transactions_to_show === 'expense') {
+                            if (each_entry.transaction_type === 'income') {
+                                return;
+                            }
+                        }
+
                         return (<tr key={index}>
                             <td className="border border-gray-600 px-3 py-2">{each_entry.date}</td>
                             <td className="border border-gray-600 px-3 py-2">{each_entry.payee}</td>
@@ -223,7 +232,7 @@ const Table = () => {
                             <td className="border-1 border-gray-600 px-3 py-2 text-center">
                                 <div className="flex">
                                     <span className={`flex items-center gap-2  m-auto ${each_entry.transaction_type === 'income' ? "bg-green-100 text-green-500 dark:bg-green-400" : "bg-red-100 text-red-500 dark:bg-red-400"} px-1 rounded`}>
-                                        <h6>{each_entry.transaction_type === 'income' ? '+' : '-'} {each_entry.amount.amount_value} ({each_entry.amount.currency_type})</h6>
+                                        <h6 className="text-sm">{each_entry.transaction_type === 'income' ? '+' : '-'} {each_entry.amount.amount_value} ({each_entry.amount.currency_type})</h6>
                                         {each_entry.transaction_type === 'income' ? <LuTrendingUp /> : <LuTrendingDown />}
                                     </span>
                                 </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Cell, Legend, Pie, PieChart, ResponsiveContainer, Tooltip } from 'recharts';
 
-const CustomPieChart = () => {
+const CustomPieChart = ({ custom_style_class = '' }) => {
 
   const data = [
     {
@@ -30,7 +30,7 @@ const CustomPieChart = () => {
   console.log("Pie Chart runned!");
 
   return (
-    <div className='mt-10' style={{ width: '100%', height: '500px' }}>
+    <div className={custom_style_class} style={{ width: '100%', height: '500px' }}>
       <ResponsiveContainer width="100%" height="100%">
         <PieChart width={400} height={100}>
           <Pie data={data} cx={'50%'} cy={'50%'} outerRadius={150} dataKey='amount' nameKey='category' fill='rgb(28 35 56)' label>
