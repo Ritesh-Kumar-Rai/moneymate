@@ -45,3 +45,21 @@ export const SIDE_MENU_DATA = [
     path: "/logout",
   },
 ];
+
+// context data structure
+
+{
+  transaction_entries: [
+    {
+      date: "",
+      payee: "",
+      transaction_type: "income/expense",
+      amount: {
+        amount_value: "$90",
+        currency_type: "usd",
+      },
+      category: "",
+      notes: "",
+    },
+  ];
+}

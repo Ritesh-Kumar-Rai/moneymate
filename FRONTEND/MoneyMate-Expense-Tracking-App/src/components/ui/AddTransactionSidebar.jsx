@@ -19,7 +19,7 @@ const AddTransactionSidebar = ({ isOpen, closeSidebar }) => {
                     </h2>
                     <button
                         onClick={closeSidebar}
-                        className="text-3xl text-gray-500 hover:text-red-600 dark:text-gray-400 font-bold cursor-pointer transition-colors"
+                        className="text-3xl text-gray-500 dark:text-gray-400 hover:text-red-600 font-bold cursor-pointer transition-colors"
                     >
                         <IoMdClose />
                     </button>

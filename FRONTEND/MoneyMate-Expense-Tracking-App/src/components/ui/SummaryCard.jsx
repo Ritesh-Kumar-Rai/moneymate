@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SummaryCard = ({ icon, bg_color = 'bg-gray-800', label, value_amount }) => {
+const SummaryCard = ({ icon, bg_color = 'bg-gray-800', label = '', value_amount = 0 }) => {
     //  card 
     return (
         <div className="total-summary-card flex gap-2 p-3 rounded-2xl shadow-2xl outline-2 outline-slate-400 hover:outline-blue-600 duration-200 transition-outline-color">
