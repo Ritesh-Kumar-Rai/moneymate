@@ -3,7 +3,7 @@ import moneyMate_Icon from "../../assets/logoipsum_money_mate_custom_logo.svg";
 
 const Header = () => {
     return (
-        <header className='flex items-center justify-between p-2 px-6  bg-slate-100 dark:bg-gray-900 border-b-2 border-slate-200 dark:border-gray-700'>
+        <header className='flex items-center justify-between p-2 px-6  bg-slate-100 dark:bg-gray-900 border-b-2 border-slate-200 dark:border-gray-700 sticky top-0 left-0 w-full z-50'>
             <div>
                 <img src={moneyMate_Icon} className="dark:invert transition duration-300" alt="moneymate-logo" width={150} />
             </div>
