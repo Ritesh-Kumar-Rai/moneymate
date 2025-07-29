@@ -8,7 +8,7 @@ const AppLayout = () => {
     return (
         <>
             <Header />
-            <main className='w-full flex'>
+            <main className='w-full flex scroll-smooth'>
                 <SideMenu />
                 <Outlet />
             </main>
