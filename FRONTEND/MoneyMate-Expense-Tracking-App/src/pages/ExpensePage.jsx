@@ -3,22 +3,36 @@ import { TbCategory2 } from "react-icons/tb";
 import { SiDatabricks } from "react-icons/si";
 import SummaryCard from "../components/ui/SummaryCard";
 import GraphChart from "../components/charts/GraphChart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CustomBarChart from "../components/charts/CustomBarChart";
 import CustomPieChart from "../components/charts/CustomPieChart";
 import Table from "../components/ui/Table";
-import CurrencyLoader from "../components/ui/CurrencyLoader";
 
 const ExpensePage = () => {
 
     const [chart_type, setChart_Type] = useState('line');
+    const [loadingExpenses, setLoadingExpenses] = useState(true);
+    const [loadingCategory, setLoadingCategory] = useState(true);
+    const [loadingEntry, setLoadingEntry] = useState(true);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoadingExpenses(false);
+        }, 5000);
+        setTimeout(() => {
+            setLoadingCategory(false);
+        }, 10000);
+        setTimeout(() => {
+            setLoadingEntry(false);
+        }, 15000);
+    }, []);
 
     return (
         <section id="expense-page" className="w-full min-h-screen dark:bg-gray-900 p-5">
             <div className="summary-total-container w-full p-10 flex justify-between items-center flex-wrap gap-5 shadow-2xl dark:bg-gray-800 rounded-2xl">
-                <SummaryCard icon={<GiPayMoney />} bg_color='bg-red-700' label={"Total Expenses"} value_amount={2788} />
-                <SummaryCard icon={<TbCategory2 />} bg_color='bg-amber-700' label={"Highest Category"} isMoneyType={false} value_amount="Electronics" />
-                <SummaryCard icon={<SiDatabricks />} bg_color='bg-sky-700' label={"Total Entries"} isMoneyType={false} value_amount={10} />
+                <SummaryCard icon={<GiPayMoney />} bg_color='bg-red-700' label={"Total Expenses"} value_amount={2788} isLoading={loadingExpenses} />
+                <SummaryCard icon={<TbCategory2 />} bg_color='bg-amber-700' label={"Highest Category"} isMoneyType={false} value_amount="Electronics" isLoading={loadingCategory} />
+                <SummaryCard icon={<SiDatabricks />} bg_color='bg-sky-700' label={"Total Entries"} isMoneyType={false} value_amount={10} isLoading={loadingEntry} />
             </div>
 
             <div className='w-full mt-10 flex items-center justify-between'>
