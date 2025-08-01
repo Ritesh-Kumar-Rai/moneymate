@@ -5,7 +5,9 @@ import SummaryCard from "../components/ui/SummaryCard";
 import GraphChart from "../components/charts/GraphChart";
 import { useState } from "react";
 import CustomBarChart from "../components/charts/CustomBarChart";
+import CustomPieChart from "../components/charts/CustomPieChart";
 import Table from "../components/ui/Table";
+import CurrencyLoader from "../components/ui/CurrencyLoader";
 
 const ExpensePage = () => {
 
@@ -31,6 +33,7 @@ const ExpensePage = () => {
                     <option value="line-graph">Line Graph</option>
                     <option value="area-graph">Area Graph</option>
                     <option value="bar-chart">Bar Chart</option>
+                    <option value="pie-chart">Pie Chart</option>
                 </select>
             </div>
             {/* chart section */}
@@ -49,10 +52,10 @@ const ExpensePage = () => {
                     </select>
                 </div>
                 <div className="flex items-center place-content-center">
-                    {(chart_type === "bar-chart") ? <CustomBarChart /> : <GraphChart type={chart_type} />}
+                    {(chart_type === "bar-chart") ? <CustomBarChart /> : ((chart_type === "pie-chart") ? <CustomPieChart /> : <GraphChart type={chart_type} />)}
                 </div>
             </div>
-            <hr className="my-5 border-2 border-gray-300 dark:border-slate-600 rounded-xs" />
+            <hr className="my-16 border-2 border-gray-300 dark:border-slate-600 rounded-xs" />
             {/* table filter section */}
             <div className="mt-10 flex items-center place-content-end">
                 <select name="" id="" className="bg-gray-50 border-1 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
