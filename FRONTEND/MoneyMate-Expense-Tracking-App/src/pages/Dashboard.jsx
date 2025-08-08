@@ -29,9 +29,9 @@ const Dashboard = () => {
             {/* expense-container */}
             <div className='mt-30'>
                 <h2>Expenses of Last 2 weeks</h2>
-                <div className='w-full grid grid-cols-1 md:grid-cols-3 items-center'>
-                    <Table custom_style_class='col-span-2' caption='Expenses of last 2 weeks' transactions_to_show='expense' no_of_rows={10} />
-                    <CustomPieChart />
+                <div className='w-full grid grid-cols-1 xl:grid-cols-3 xl:grid-rows-1 gap-1 items-center'>
+                    <Table custom_style_class='col-span-1 xl:col-span-2 row-span-1' caption='Expenses of last 2 weeks' transactions_to_show='expense' no_of_rows={10} />
+                    <CustomPieChart custom_style_class='col-span-1 xl:col-span-1 row-span-1' />
                 </div>
             </div>
 

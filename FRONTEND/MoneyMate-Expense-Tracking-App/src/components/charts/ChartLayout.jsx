@@ -8,8 +8,8 @@ const ChartLayout = ({ label_for_graph, label_for_pie }) => {
     const [chart_type, setChart_Type] = React.useState('line');
 
     return (
-        <div className='mt-30 w-full h-auto flex gap-10 justify-between flex-wrap'>
-            <div className='w-[60%]'> {/* This div is for graph charts */}
+        <div className='mt-30 w-full h-auto block lg:flex gap-0 xl:gap-10 justify-between flex-wrap'>
+            <div className='w-full lg:w-[60%]'> {/* This div is for graph charts */}
                 <div className='w-full flex items-center justify-between'>
                     <h2>{label_for_graph}</h2>
                     <select
@@ -26,7 +26,7 @@ const ChartLayout = ({ label_for_graph, label_for_pie }) => {
 
                 {(chart_type === 'bar-chart') ? <CustomBarChart /> : <GraphChart type={chart_type} />}
             </div>
-            <div className='w-[30%]'> {/* This div is for pie charts */}
+            <div className='w-full lg:w-[30%]'> {/* This div is for pie charts */}
                 <div className='w-full flex items-center justify-between'>
                     <h2>{label_for_pie}</h2>
                     <select name="" id=""
