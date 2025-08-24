@@ -4,9 +4,9 @@ import Dashboard from './pages/Dashboard';
 import AppLayout from './components/layouts/AppLayout';
 import ErrorPage from './pages/ErrorPage';
 import ExpensePage from './pages/ExpensePage';
+import DemoExpensePage from './pages/DemoExpensePage'
 
 function App() {
-
   return (
 
     <Router>
@@ -14,6 +14,7 @@ function App() {
         <Route element={<AppLayout />}>
           <Route path="/" element={<Dashboard />} />
           <Route path="/expenses" element={<ExpensePage />} />
+          {/* <Route path="/expenses2" element={<DemoExpensePage />} /> */}
           {/* <Route path="/income" element={<IncomePage />} /> */}
           {/* <Route path="/budget" element={<BudgetPage />} /> */}
           {/* <Route path="/subscriptions" element={<SubscriptionPage />} /> */}

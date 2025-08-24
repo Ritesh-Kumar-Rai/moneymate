@@ -17,7 +17,7 @@ const SideMenu = () => {
                                 <data.icon className='text-xl font-bold' />
                                 {data.label}
                             </NavLink>
-                            : <button key={`${data.id}_${index}`} type='button' className='w-full flex items-center gap-4 active:scale-95 active:bg-slate-500 duration-75 transition-bg border-1 border-gray-400 bg-indigo-100 text-[15px] font-bold text-violet-900 dark:bg-gray-700 py-1 px-3 rounded-lg cursor-pointer my-6' onClick={() => setSidebarOpen(true)}><data.icon className='text-xl font-bold' /> {data.label}</button>
+                            : <button key={`${data.id}_${index}`} type='button' className='w-full flex items-center gap-4 active:scale-95 active:bg-slate-300 dark:active:bg-slate-500 duration-75 transition-bg border-1 border-gray-400 bg-indigo-100 text-[15px] font-bold text-violet-900 dark:bg-gray-700 py-1 px-3 rounded-lg cursor-pointer my-6' onClick={() => setSidebarOpen(true)}><data.icon className='text-xl font-bold' /> {data.label}</button>
                     ))}
                 </nav>
             </aside>

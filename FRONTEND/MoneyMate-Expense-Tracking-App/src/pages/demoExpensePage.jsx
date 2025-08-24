@@ -38,7 +38,7 @@ const transactions = [
     { date: "2025-07-22", category: "Salary", description: "Monthly Income", amount: 3000, type: "Income" },
 ];
 
-export default function ExpensePage() {
+export default function DemoExpensePage() {
     console.log('expense page ')
     return (
         <div className="p-6 space-y-8 bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-100 min-h-screen w-full">

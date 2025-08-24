@@ -175,9 +175,9 @@ const Table = ({ no_of_rows = 5, label = '', caption = '', custom_style_class = 
     ];
 
     return (
-        <div className={`w-full ${custom_style_class}`}>
+        <div className={`overflow-x-scroll w-full ${custom_style_class}`}>
             {label.length > 0 && <h2>{label}</h2>}
-            <table className="mt-5 w-full table-auto border-collapse border border-gray-400 bg-slate-200 dark:bg-gray-800 rounded overflow-hidden outline-1 outline-dashed outline-slate-400 shadow-2xl">
+            <table className="mt-5 min-w-[1200px] w-full table-auto border-collapse border border-gray-400 bg-slate-200 dark:bg-gray-800 rounded overflow-hidden outline-1 outline-dashed outline-slate-400 shadow-2xl">
                 <caption className="caption-bottom mt-3 text-sm">{caption}</caption>
                 <thead className="border-b-2 border-slate-400">
                     <tr>
@@ -242,7 +242,7 @@ const Table = ({ no_of_rows = 5, label = '', caption = '', custom_style_class = 
                                 <button type="button" className="absolute left-[-7%] rounded-2xl bg-indigo-800 hover:bg-indigo-500 active:scale-90 text-white w-[50px] text-center cursor-pointer transition-scale-bg duration-200 will-change-transform select-none" title="swap currency"><CgSwap className="text-2xl m-auto" /> </button>
                                 $890373
                             </td>
-                            <td className="border border-gray-600 px-3 py-2 text-center"><IoMdMore className="m-auto cursor-pointer text-2xl hover:bg-gray-500 rounded" /></td>
+                            <td className="border border-gray-600 px-3 py-2 text-center"><IoMdMore className="m-auto cursor-pointer text-2xl hover:bg-gray-300 dark:hover:bg-gray-500 rounded" /></td>
                         </tr>);
                     })}
 
