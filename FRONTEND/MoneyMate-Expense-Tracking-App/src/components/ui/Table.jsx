@@ -175,9 +175,9 @@ const Table = ({ no_of_rows = 5, label = '', caption = '', custom_style_class = 
     ];
 
     return (
-        <div className={`overflow-x-scroll w-full ${custom_style_class}`}>
+        <div className={`w-full ${custom_style_class}`}>
             {label.length > 0 && <h2>{label}</h2>}
-            <table className="mt-5 min-w-[1200px] w-full table-auto border-collapse border border-gray-400 bg-slate-200 dark:bg-gray-800 rounded overflow-hidden outline-1 outline-dashed outline-slate-400 shadow-2xl">
+            <table className="mt-5 w-full table-auto border-collapse border border-gray-400 bg-slate-200 dark:bg-gray-800 rounded overflow-hidden outline-1 outline-dashed outline-slate-400 shadow-2xl">
                 <caption className="caption-bottom mt-3 text-sm">{caption}</caption>
                 <thead className="border-b-2 border-slate-400">
                     <tr>
